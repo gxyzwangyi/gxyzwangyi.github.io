@@ -225,25 +225,21 @@
 
       
         
-          <span itemprop="articleBody"><p>##开发环境</p>
-<p>###硬件</p>
-<ul>
+          <span itemprop="articleBody"><h2 id="开发环境">开发环境</h2><h3 id="硬件">硬件</h3><ul>
 <li>DJI Matrice 100</li>
 <li>DJI Manifold</li>
 <li>ZENMUSE X3<br>###软件</li>
 <li>Ubuntu 14.04 LTS</li>
 <li>ros indigo</li>
 </ul>
-<p>##连线与安装驱动<br>本文主要描述硬件方面如何连线以及运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK" target="_blank" rel="external">Linux版本</a> </p>
-<p>###机身与电脑连接</p>
-<p>####驱动安装<br>当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解决方案。</p>
+<h2 id="连线与安装驱动">连线与安装驱动</h2><p>本文主要描述硬件方面如何连线以及运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK" target="_blank" rel="external">Linux版本</a> </p>
+<h3 id="机身与电脑连接">机身与电脑连接</h3><h4 id="驱动安装">驱动安装</h4><p>当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解决方案。</p>
 <ul>
 <li>检测usb连接线，不要使用延长线以及前置usb，可在设备管理器中查看设备是否成功连接</li>
 <li>将usbser.sys（dji网站提供下载）复制到c:\windows\system32\drivers</li>
 <li>开机时候进入高级模式修改签名验证，禁用数字签名。</li>
 </ul>
-<p>####调参工具及模拟器</p>
-<ul>
+<h4 id="调参工具及模拟器">调参工具及模拟器</h4><ul>
 <li><p>在<a href="https://developer.dji.com/matrice-100/downloads/" target="_blank" rel="external">此页面</a>下载n1调参工具和模拟器，只支持windows。</p>
 </li>
 <li><p>下一步就是装上驱动使用n1调参工具，勾选api启动，并且改信道为203400。</p>
@@ -254,8 +250,7 @@
 <blockquote>
 <p>注意：一定要卸下机翼，并且要保持usb线的连接稳定，否则如果没有识别为模拟器模式可能会起飞。</p>
 </blockquote>
-<p>###onboard设备与m100相连</p>
-<ul>
+<h3 id="onboard设备与m100相连">onboard设备与m100相连</h3><ul>
 <li><p>以Manifold为例，使用Manifold上的<em>UART2</em>接口与机身上的<em>UART_can2</em>,连线之后可以通过cat /dev/ttyTHS1 是否有数据写入，来判断该设备是否连接成功。</p>
 </li>
 <li><p>注意修改供电方式，使用机身上的转接口对Manifold进行供电。</p>
@@ -263,11 +258,10 @@
 <li><p>在给Manifold配置了无线网卡后可以利用pc机的ssh控制Manifold。</p>
 </li>
 </ul>
-<p>###测试linux 例程</p>
-<p>####配置程序</p>
-<ul>
+<h3 id="测试linux_例程">测试linux 例程</h3><h4 id="配置程序">配置程序</h4><ul>
 <li>先参照dji github 主页上操作指南使用</li>
-<li><p>除了修改config.xml数据之外，还需要找到的DJI_Pro_Sample.cpp中的DJI_Sample_Setup函数<br>去修改设备名字和频段。<br>####模拟器调试<br>需要同时满足以下三个操作</p>
+<li><p>除了修改config.xml数据之外，还需要找到的DJI_Pro_Sample.cpp中的DJI_Sample_Setup函数<br>去修改设备名字和频段。</p>
+<h4 id="模拟器调试">模拟器调试</h4><p>需要同时满足以下三个操作</p>
 </li>
 <li><p>打开api控制</p>
 </li>
