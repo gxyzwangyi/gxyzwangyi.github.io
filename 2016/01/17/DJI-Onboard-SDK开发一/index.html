@@ -28,7 +28,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,next" />
+  <meta name="keywords" content="DJI,Linux,UAV," />
 
 
 
@@ -37,16 +37,49 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description">
+<meta name="description" content="##开发环境
+###硬件
+
+DJI Matrice 100
+DJI Manifold
+ZENMUSE X3###软件
+Ubuntu 14.04 LTS
+ros indigo
+
+##连线与安装驱动本文主要描述硬件方面如何连线以及运行官方demo中的Linux版本 
+###机身与电脑连接
+####驱动安装当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="1">
-<meta property="og:url" content="http://yoursite.com/2016/01/15/1/index.html">
+<meta property="og:title" content="DJI Onboard SDK开发一">
+<meta property="og:url" content="http://yoursite.com/2016/01/17/DJI-Onboard-SDK开发一/index.html">
 <meta property="og:site_name" content="汪毅博客">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-01-15T13:48:53.152Z">
+<meta property="og:description" content="##开发环境
+###硬件
+
+DJI Matrice 100
+DJI Manifold
+ZENMUSE X3###软件
+Ubuntu 14.04 LTS
+ros indigo
+
+##连线与安装驱动本文主要描述硬件方面如何连线以及运行官方demo中的Linux版本 
+###机身与电脑连接
+####驱动安装当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解">
+<meta property="og:updated_time" content="2016-01-17T06:18:34.685Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="1">
-<meta name="twitter:description">
+<meta name="twitter:title" content="DJI Onboard SDK开发一">
+<meta name="twitter:description" content="##开发环境
+###硬件
+
+DJI Matrice 100
+DJI Manifold
+ZENMUSE X3###软件
+Ubuntu 14.04 LTS
+ros indigo
+
+##连线与安装驱动本文主要描述硬件方面如何连线以及运行官方demo中的Linux版本 
+###机身与电脑连接
+####驱动安装当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -56,7 +89,7 @@
   };
 </script>
 
-  <title> 1 | 汪毅博客 </title>
+  <title> DJI Onboard SDK开发一 | 汪毅博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -171,7 +204,7 @@
           
           
             
-              1
+              DJI Onboard SDK开发一
             
           
         </h1>
@@ -180,19 +213,34 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-01-15T21:48:53+08:00" content="2016-01-15">
-            2016-01-15
+          <time itemprop="dateCreated" datetime="2016-01-17T13:44:03+08:00" content="2016-01-17">
+            2016-01-17
           </time>
         </span>
 
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/UAV/" itemprop="url" rel="index">
+                  <span itemprop="name">UAV</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/01/15/1/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/15/1/" itemprop="commentsCount"></span>
+              <a href="/2016/01/17/DJI-Onboard-SDK开发一/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/17/DJI-Onboard-SDK开发一/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -206,11 +254,71 @@
       
 
       
-        <span itemprop="articleBody"></span>
+        <span itemprop="articleBody"><p>##开发环境</p>
+<p>###硬件</p>
+<ul>
+<li>DJI Matrice 100</li>
+<li>DJI Manifold</li>
+<li>ZENMUSE X3<br>###软件</li>
+<li>Ubuntu 14.04 LTS</li>
+<li>ros indigo</li>
+</ul>
+<p>##连线与安装驱动<br>本文主要描述硬件方面如何连线以及运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK" target="_blank" rel="external">Linux版本</a> </p>
+<p>###机身与电脑连接</p>
+<p>####驱动安装<br>当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解决方案。</p>
+<ul>
+<li>检测usb连接线，不要使用延长线以及前置usb，可在设备管理器中查看设备是否成功连接</li>
+<li>将usbser.sys（dji网站提供下载）复制到c:\windows\system32\drivers</li>
+<li>开机时候进入高级模式修改签名验证，禁用数字签名。</li>
+</ul>
+<p>####调参工具及模拟器</p>
+<ul>
+<li><p>在<a href="https://developer.dji.com/matrice-100/downloads/" target="_blank" rel="external">此页面</a>下载n1调参工具和模拟器，只支持windows。</p>
+</li>
+<li><p>下一步就是装上驱动使用n1调参工具，勾选api启动，并且改信道为203400。</p>
+</li>
+<li><p>最后使用模拟器来测试，使用模拟器务必要关了调参工具后进行，当点击模拟器时出现了本机的sn码之后才算成功，m100在模拟中显示为白色，如果模拟器中显示的并不是m100请退出之后，先start再display。</p>
+</li>
+</ul>
+<blockquote>
+<p>注意：一定要卸下机翼，并且要保持usb线的连接稳定，否则如果没有识别为模拟器模式可能会起飞。</p>
+</blockquote>
+<p>###onboard设备与m100相连</p>
+<ul>
+<li><p>以Manifold为例，使用Manifold上的<em>UART2</em>接口与机身上的<em>UART_can2</em>,连线之后可以通过cat /dev/ttyTHS1 是否有数据写入，来判断该设备是否连接成功。</p>
+</li>
+<li><p>注意修改供电方式，使用机身上的转接口对Manifold进行供电。</p>
+</li>
+<li><p>在给Manifold配置了无线网卡后可以利用pc机的ssh控制Manifold。</p>
+</li>
+</ul>
+<p>###测试linux 例程</p>
+<p>####配置程序</p>
+<ul>
+<li>先参照dji github 主页上操作指南使用</li>
+<li><p>除了修改config.xml数据之外，还需要找到的DJI_Pro_Sample.cpp中的DJI_Sample_Setup函数<br>去修改设备名字和频段。<br>####模拟器调试<br>需要同时满足以下三个操作</p>
+</li>
+<li><p>打开api控制</p>
+</li>
+<li>关闭ioc（dji go app中ioc具有最高优先级）</li>
+<li>遥控器F档（需要从其它档挂回F，并且不能再挂回其它档的，会再次失去控制并且返回f也无效）</li>
+</ul>
+<p>此模式下的拍照与录像还是通过遥控器进行传输，并不是通过Onboard设备进行传输，下文将介绍关于ros例程的操作方法</p>
+</span>
       
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/DJI/" rel="tag">#DJI</a>
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+            <a href="/tags/UAV/" rel="tag">#UAV</a>
+          
+        </div>
       
 
       
@@ -238,8 +346,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/01/15/1/"
-                   data-title="1" data-url="http://yoursite.com/2016/01/15/1/">
+              <div class="ds-thread" data-thread-key="2016/01/17/DJI-Onboard-SDK开发一/"
+                   data-title="DJI Onboard SDK开发一" data-url="http://yoursite.com/2016/01/17/DJI-Onboard-SDK开发一/">
               </div>
             
           </div>
@@ -286,14 +394,14 @@
 
           <div class="site-state-item site-state-categories">
             <a href="/categories">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">分类</span>
               </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
