@@ -47,8 +47,7 @@ Ubuntu 14.04 LTS
 ROS indigo
 
 DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基础功能。
-###安装ros系统
-####安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以">
+安装ros系统安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以根据提示一步一步">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DJI-Onboard-SDK开发二">
 <meta property="og:url" content="http://leviathan.wang/2016/01/18/DJI-Onboard-SDK开发二/index.html">
@@ -63,9 +62,8 @@ Ubuntu 14.04 LTS
 ROS indigo
 
 DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基础功能。
-###安装ros系统
-####安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以">
-<meta property="og:updated_time" content="2016-01-18T04:34:55.999Z">
+安装ros系统安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以根据提示一步一步">
+<meta property="og:updated_time" content="2016-01-18T04:39:29.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DJI-Onboard-SDK开发二">
 <meta name="twitter:description" content="硬件
@@ -78,8 +76,7 @@ Ubuntu 14.04 LTS
 ROS indigo
 
 DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基础功能。
-###安装ros系统
-####安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以">
+安装ros系统安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以根据提示一步一步">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -264,11 +261,9 @@ DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基
 <li>ROS indigo</li>
 </ul>
 <h2 id="DJI_Onboard_SDK开发二">DJI Onboard SDK开发二</h2><p>本文主要描述运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK-ROS" target="_blank" rel="external">ROS版本</a> 的基础功能。</p>
-<p>###安装ros系统</p>
-<p>####安装步骤<br>Manifold预装系统是ubuntu14.04并且是arm架构，建议安装<a href="http://wiki.ros.org/indigo/Installation/UbuntuARM" target="_blank" rel="external">ros-armhf-indigo版本</a>,可以根据提示一步一步的进行安装，这里就不赘述了。</p>
-<p>####配置提示<br>注意在indigo之后版本的ros系统的精简版中rosbash包（包括roscd、rosrun等命令）是不预置，需要自己搜索安装。<br>先使用apt-cache search rosbash来找到对应的安装包，需找到安装命令利用sudo apt-get install ros-indigo-rosbash 安装即可。<br>之后再运行source /opt/ros/indigo/setup.bash，或者如果已经加入此条命令在.bashrc中，则source  ~/.bashrc即可。</p>
-<p>###运行ros例程</p>
-<p>####创建catkin工作区<br>如果刚刚安装了catkin需要先运行一下一下命令</p>
+<h3 id="安装ros系统">安装ros系统</h3><h4 id="安装步骤">安装步骤</h4><p>Manifold预装系统是ubuntu14.04并且是arm架构，建议安装<a href="http://wiki.ros.org/indigo/Installation/UbuntuARM" target="_blank" rel="external">ros-armhf-indigo版本</a>,可以根据提示一步一步的进行安装，这里就不赘述了。</p>
+<h4 id="配置提示">配置提示</h4><p>注意在indigo之后版本的ros系统的精简版中rosbash包（包括roscd、rosrun等命令）是不预置，需要自己搜索安装。<br>先使用apt-cache search rosbash来找到对应的安装包，需找到安装命令利用sudo apt-get install ros-indigo-rosbash 安装即可。<br>之后再运行source /opt/ros/indigo/setup.bash，或者如果已经加入此条命令在.bashrc中，则source  ~/.bashrc即可。</p>
+<h3 id="运行ros例程">运行ros例程</h3><h4 id="创建catkin工作区">创建catkin工作区</h4><p>如果刚刚安装了catkin需要先运行一下一下命令</p>
 <pre><code>$ <span class="keyword">source</span> <span class="regexp">/opt/</span>ros<span class="regexp">/indigo/</span>setup.bash
 </code></pre><p>创建文件夹并初始化</p>
 <pre><code><span class="variable">$ </span>mkdir -p ~<span class="regexp">/catkin_ws/src</span>
@@ -280,7 +275,7 @@ DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基
 </code></pre><p>然后查看环境变量，看看工作区路径是否已经存在于环境变量</p>
 <pre><code>$ echo $ROS_PACKAGE_PATH
 <span class="regexp">/home/</span>ubuntu<span class="regexp">/catkin_ws/</span><span class="string">src:</span><span class="regexp">/opt/</span>ros<span class="regexp">/indigo/</span><span class="string">share:</span><span class="regexp">/opt/</span>ros<span class="regexp">/indigo/</span>stacks
-</code></pre><p>####git获取例程并编译<br>git下载再拷贝并编译，每次运行需要source一次devel中的setup.bash,使得系统识别工作区的包。</p>
+</code></pre><h4 id="git获取例程并编译">git获取例程并编译</h4><p>git下载再拷贝并编译，每次运行需要source一次devel中的setup.bash,使得系统识别工作区的包。</p>
 <pre><code><span class="variable">$ </span>cd ~<span class="regexp">/Downloads
 $ git clone https:/</span><span class="regexp">/github.com/dji</span>-sdk/<span class="constant">Onboard</span>-<span class="constant">SDK</span>.git
 <span class="variable">$ </span>cp -<span class="constant">R</span> <span class="constant">Onboard_SDK_Sample</span>/<span class="constant">DJI_Onboard_API_ROS_Sample</span>
@@ -291,7 +286,7 @@ $ cd ~/catkin</span>_ws
 </code></pre><p>接着查看包是否被加载</p>
 <pre><code><span class="variable">$ </span>rospack find dji_sdk
 </code></pre><p>如果能够查看到路径，说明已经demo包已经被系统识别。</p>
-<p>####修改源码<br>进入launch文件修改配置文件</p>
+<h4 id="修改源码">修改源码</h4><p>进入launch文件修改配置文件</p>
 <pre><code>rosed dji_sdk/<span class="command">launch</span>/sdk_manifold.<span class="command">launch</span>.
 </code></pre><p>修改方案如下    </p>
 <ul>
@@ -300,7 +295,7 @@ $ cd ~/catkin</span>_ws
 <li>app_id, enc_key, app_api_level 分别填入登记 APP 获得的 APP<br>ID， Communication Key 及对应 level</li>
 <li>app_version 及 app_bundle_id 在目前的版本中并未使用，保持默认即<br>可</li>
 </ul>
-<p>####运行例程<br>输入命令启动核心节点</p>
+<h4 id="运行例程">运行例程</h4><p>输入命令启动核心节点</p>
 <pre><code>$ roslaunch dji_sdk sdk_manifold.<span class="command">launch</span>
 </code></pre><p>然后再运行用户交互节点</p>
 <pre><code><span class="variable">$ </span>rosrun dji_ros dji_ros_client
@@ -461,7 +456,7 @@ $ cd ~/catkin</span>_ws
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">2.</span> <span class="nav-text">软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DJI_Onboard_SDK开发二"><span class="nav-number"></span> <span class="nav-text">DJI Onboard SDK开发二</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">2.</span> <span class="nav-text">软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DJI_Onboard_SDK开发二"><span class="nav-number"></span> <span class="nav-text">DJI Onboard SDK开发二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ros系统"><span class="nav-number">1.</span> <span class="nav-text">安装ros系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置提示"><span class="nav-number">1.2.</span> <span class="nav-text">配置提示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行ros例程"><span class="nav-number">2.</span> <span class="nav-text">运行ros例程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建catkin工作区"><span class="nav-number">2.1.</span> <span class="nav-text">创建catkin工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git获取例程并编译"><span class="nav-number">2.2.</span> <span class="nav-text">git获取例程并编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改源码"><span class="nav-number">2.3.</span> <span class="nav-text">修改源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行例程"><span class="nav-number">2.4.</span> <span class="nav-text">运行例程</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
