@@ -63,7 +63,7 @@ ROS indigo
 
 DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基础功能。
 安装ros系统安装步骤Manifold预装系统是ubuntu14.04并且是arm架构，建议安装ros-armhf-indigo版本,可以根据提示一步一步">
-<meta property="og:updated_time" content="2016-01-18T04:39:29.037Z">
+<meta property="og:updated_time" content="2016-01-18T04:41:26.491Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DJI-Onboard-SDK开发二">
 <meta name="twitter:description" content="硬件
@@ -262,7 +262,8 @@ DJI Onboard SDK开发二本文主要描述运行官方demo中的ROS版本 的基
 </ul>
 <h2 id="DJI_Onboard_SDK开发二">DJI Onboard SDK开发二</h2><p>本文主要描述运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK-ROS" target="_blank" rel="external">ROS版本</a> 的基础功能。</p>
 <h3 id="安装ros系统">安装ros系统</h3><h4 id="安装步骤">安装步骤</h4><p>Manifold预装系统是ubuntu14.04并且是arm架构，建议安装<a href="http://wiki.ros.org/indigo/Installation/UbuntuARM" target="_blank" rel="external">ros-armhf-indigo版本</a>,可以根据提示一步一步的进行安装，这里就不赘述了。</p>
-<h4 id="配置提示">配置提示</h4><p>注意在indigo之后版本的ros系统的精简版中rosbash包（包括roscd、rosrun等命令）是不预置，需要自己搜索安装。<br>先使用apt-cache search rosbash来找到对应的安装包，需找到安装命令利用sudo apt-get install ros-indigo-rosbash 安装即可。<br>之后再运行source /opt/ros/indigo/setup.bash，或者如果已经加入此条命令在.bashrc中，则source  ~/.bashrc即可。</p>
+<h4 id="配置操作">配置操作</h4><p>注意在indigo之后版本的ros系统的精简版中rosbash包（包括roscd、rosrun等命令）是不预置，需要自己搜索安装。<br>先使用apt-cache search rosbash来找到对应的安装包，需找到安装命令利用sudo apt-get install ros-indigo-rosbash 安装即可。<br>之后再运行source /opt/ros/indigo/setup.bash，或者如果已经加入此条命令在.bashrc中，则source  ~/.bashrc即可。</p>
+<a id="more"></a>
 <h3 id="运行ros例程">运行ros例程</h3><h4 id="创建catkin工作区">创建catkin工作区</h4><p>如果刚刚安装了catkin需要先运行一下一下命令</p>
 <pre><code>$ <span class="keyword">source</span> <span class="regexp">/opt/</span>ros<span class="regexp">/indigo/</span>setup.bash
 </code></pre><p>创建文件夹并初始化</p>
@@ -456,7 +457,7 @@ $ cd ~/catkin</span>_ws
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">2.</span> <span class="nav-text">软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DJI_Onboard_SDK开发二"><span class="nav-number"></span> <span class="nav-text">DJI Onboard SDK开发二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ros系统"><span class="nav-number">1.</span> <span class="nav-text">安装ros系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置提示"><span class="nav-number">1.2.</span> <span class="nav-text">配置提示</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行ros例程"><span class="nav-number">2.</span> <span class="nav-text">运行ros例程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建catkin工作区"><span class="nav-number">2.1.</span> <span class="nav-text">创建catkin工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git获取例程并编译"><span class="nav-number">2.2.</span> <span class="nav-text">git获取例程并编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改源码"><span class="nav-number">2.3.</span> <span class="nav-text">修改源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行例程"><span class="nav-number">2.4.</span> <span class="nav-text">运行例程</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#硬件"><span class="nav-number">1.</span> <span class="nav-text">硬件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件"><span class="nav-number">2.</span> <span class="nav-text">软件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DJI_Onboard_SDK开发二"><span class="nav-number"></span> <span class="nav-text">DJI Onboard SDK开发二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ros系统"><span class="nav-number">1.</span> <span class="nav-text">安装ros系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装步骤"><span class="nav-number">1.1.</span> <span class="nav-text">安装步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置操作"><span class="nav-number">1.2.</span> <span class="nav-text">配置操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行ros例程"><span class="nav-number">2.</span> <span class="nav-text">运行ros例程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建catkin工作区"><span class="nav-number">2.1.</span> <span class="nav-text">创建catkin工作区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git获取例程并编译"><span class="nav-number">2.2.</span> <span class="nav-text">git获取例程并编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改源码"><span class="nav-number">2.3.</span> <span class="nav-text">修改源码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运行例程"><span class="nav-number">2.4.</span> <span class="nav-text">运行例程</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
