@@ -225,7 +225,8 @@
 
       
         
-          <h3 id="硬件">硬件</h3><ul>
+          <p>本文主要描述运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK-ROS">ROS版本</a> 的基础功能。</p>
+<h2 id="开发环境">开发环境</h2><h3 id="硬件">硬件</h3><ul>
 <li>DJI Matrice 100</li>
 <li>DJI Manifold</li>
 <li>ZENMUSE X3</li>
@@ -234,8 +235,7 @@
 <li>Ubuntu 14.04 LTS</li>
 <li>ROS indigo</li>
 </ul>
-<h2 id="DJI_Onboard_SDK开发二">DJI Onboard SDK开发二</h2><p>本文主要描述运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK-ROS">ROS版本</a> 的基础功能。</p>
-<h3 id="安装ros系统">安装ros系统</h3><h4 id="安装步骤">安装步骤</h4><p>Manifold预装系统是ubuntu14.04并且是arm架构，建议安装<a href="http://wiki.ros.org/indigo/Installation/UbuntuARM">ros-armhf-indigo版本</a>,可以根据提示一步一步的进行安装，这里就不赘述了。</p>
+<h2 id="操作步骤">操作步骤</h2><h3 id="安装ros系统">安装ros系统</h3><h4 id="安装步骤">安装步骤</h4><p>Manifold预装系统是ubuntu14.04并且是arm架构，建议安装<a href="http://wiki.ros.org/indigo/Installation/UbuntuARM">ros-armhf-indigo版本</a>,可以根据提示一步一步的进行安装，这里就不赘述了。</p>
 <h4 id="配置操作">配置操作</h4><p>注意在indigo之后版本的ros系统的精简版中rosbash包（包括roscd、rosrun等命令）是不预置，需要自己搜索安装。<br>先使用apt-cache search rosbash来找到对应的安装包，需找到安装命令利用sudo apt-get install ros-indigo-rosbash 安装即可。<br>之后再运行source /opt/ros/indigo/setup.bash，或者如果已经加入此条命令在.bashrc中，则source  ~/.bashrc即可。</p>
           <div class="post-more-link text-center">
             <a class="btn" href="/2016/01/18/DJI-Onboard-SDK开发二/#more" rel="contents">
@@ -324,7 +324,8 @@
 
       
         
-          <h2 id="开发环境">开发环境</h2><h3 id="硬件">硬件</h3><ul>
+          <p>本文主要描述硬件方面如何连线以及运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK">Linux版本</a> </p>
+<h2 id="开发环境">开发环境</h2><h3 id="硬件">硬件</h3><ul>
 <li>DJI Matrice 100</li>
 <li>DJI Manifold</li>
 <li>ZENMUSE X3</li>
@@ -332,8 +333,7 @@
 <h3 id="软件">软件</h3><ul>
 <li>Ubuntu 14.04 LTS</li>
 </ul>
-<h2 id="DJI_Onboard_SDK开发一">DJI Onboard SDK开发一</h2><p>本文主要描述硬件方面如何连线以及运行官方demo中的<a href="https://github.com/dji-sdk/Onboard-SDK">Linux版本</a> </p>
-<h3 id="机身与电脑连接">机身与电脑连接</h3><h4 id="驱动安装">驱动安装</h4><p>当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解决方案。</p>
+<h2 id="操作步骤">操作步骤</h2><h3 id="机身与电脑连接">机身与电脑连接</h3><h4 id="驱动安装">驱动安装</h4><p>当使用USB线连接pc与m100机身时，很多设备（尤其是win7系统）装不上驱动。主要有以下三个解决方案。</p>
 <ul>
 <li>检测USB连接线，不要使用延长线以及前置USB，可在设备管理器中查看设备是否成功连接</li>
 <li>将usbser.sys（dji网站提供下载）复制到c:\windows\system32\drivers</li>
